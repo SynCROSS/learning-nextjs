@@ -1,0 +1,16 @@
+{
+  "name": "learning-nextjs",
+  "version": "0.0.1",
+  "description": "Learning Next.js",
+  "main": "index.js",
+  "author": "SynCROSS",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
