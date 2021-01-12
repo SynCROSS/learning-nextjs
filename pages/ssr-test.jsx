@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Layout from '../components/Layout';
+import axios from 'axios';
 
 // * The value that returns from the method run by getInitialProps is passed to the props of the component.
 // * The parameter contains the 'req' on the server side. So the 'req' in the client is undefined.
@@ -9,11 +10,22 @@ import Layout from '../components/Layout';
 
 class SSRTest extends Component {
   static async getInitialProps({ req }) {
-    return req ? { from: 'server' } : { from: 'client' };
+    const response = await axios.get(
+      'https://jsonplaceholder.typicode.com/users',
+    );
+    return {
+      users: response.data,
+    };
   }
 
   render() {
-    return <Layout>Executed from the {this.props.from}.</Layout>;
+    const { users } = this.props;
+    const userList = users.map(user => <li key={user.id}>{user.username}</li>);
+    return (
+      <Layout>
+        <ul>{userList}</ul>
+      </Layout>
+    );
   }
 }
 
