@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 const Index = () => (
-  <div id="root">
+  <Layout id="root">
     <h1>Hello, Next.js</h1>
     <p>
       We don't need{' '}
@@ -37,8 +38,7 @@ const Index = () => (
         import React from 'react';
       </span>
     </p>
-    <Link href="/about">about</Link>
-  </div>
+  </Layout>
 );
 
 export default Index;
