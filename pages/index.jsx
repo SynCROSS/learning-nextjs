@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Index = () => (
   <div id="root">
     <h1>Hello, Next.js</h1>
@@ -15,9 +17,11 @@ const Index = () => (
           padding: '0.2em 0.4em',
         }}
         data-token-index="0">
-        CRA
-      </span>{' '}
-      and{' '}
+        <Link href="/create-react-app">
+          <a style={{ color: 'inherit', textDecoration: 'none' }}>CRA</a>
+        </Link>
+      </span>
+      &nbsp; and&nbsp;
       <span
         style={{
           fontFamily:
@@ -33,6 +37,7 @@ const Index = () => (
         import React from 'react';
       </span>
     </p>
+    <Link href="/about">about</Link>
   </div>
 );
 
