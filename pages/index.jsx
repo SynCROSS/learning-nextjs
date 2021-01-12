@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 const Index = () => (
   <Layout id="root">
+    <Head>
+      <title>Index</title>
+    </Head>
     <h1>Hello, Next.js</h1>
     <p>
       We don't need{' '}
