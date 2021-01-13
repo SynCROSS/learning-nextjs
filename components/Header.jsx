@@ -10,7 +10,7 @@ const Header = () => (
       <a>About</a>
     </Link>
     &nbsp;
-    <Link prefetch href="/ssr-test">
+    <Link href="/ssr-test">
       <a>SSR-TEST</a>
     </Link>
   </div>
