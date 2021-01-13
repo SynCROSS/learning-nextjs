@@ -1,5 +1,11 @@
 import Layout from '../components/Layout';
 
+// * First, styled-jsx is styled on the client side by default.
+// * The flush() function pre-work this on the server side,
+// * which doesn't matter if you don't have to run it on the server side,
+// * but it saves the computation that clients need to style,
+// * even though it doesn't have to.
+
 const About = () => (
   <Layout>
     <style jsx>
